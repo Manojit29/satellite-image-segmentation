@@ -81,15 +81,15 @@ The model demonstrates strong segmentation performance across different land cov
 
 ### Example 1
 
-![Result](images/result1.png)
+![Result](Images/result1.png)
 
 ### Example 2
 
-![Result](images/result2.png)
+![Result](Images/result2.png)
 
 ### Example 3
 
-![Result](images/result3.png)
+![Result](Images/result3.png)
 
 ---
 
