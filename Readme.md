@@ -80,16 +80,13 @@ Combination of:
 The model demonstrates strong segmentation performance across different land cover types with good alignment to ground truth.
 
 ### Example 1
-
-![Result](Images/result1.png)
+![Result](Images/result_0.png)
 
 ### Example 2
-
-![Result](Images/result2.png)
+![Result](Images/result_1.png)
 
 ### Example 3
-
-![Result](Images/result3.png)
+![Result](Images/result_2.png)
 
 ---
 
