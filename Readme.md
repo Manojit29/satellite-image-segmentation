@@ -177,6 +177,7 @@ Per-class metrics are calculated by accumulating:
 
 <img width="1283" height="390" alt="image" src="https://github.com/user-attachments/assets/bf158081-d005-448e-8d71-792588a19a79" />
 <img width="1283" height="390" alt="image" src="https://github.com/user-attachments/assets/602a22fd-4345-4357-a480-10daaa929e60" />
+<img width="1283" height="390" alt="image" src="https://github.com/user-attachments/assets/32781efc-90d9-4d44-a059-8ba0c588f85d" />
 
 ---
 
