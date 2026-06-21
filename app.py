@@ -1,3 +1,4 @@
+
 import streamlit as st
 import torch
 import numpy as np
@@ -58,11 +59,55 @@ CLASS_COLORS = {
     5: [155, 155, 155]     # Unlabeled
 }
 
+CLASS_NAMES = {
+    0: "Building",
+    1: "Land",
+    2: "Road",
+    3: "Vegetation",
+    4: "Water",
+    5: "Unlabeled"
+}
+
 st.title("🛰️ Satellite Image Segmentation")
 
 st.write(
     "Upload a satellite image and generate a segmentation mask using U-Net + EfficientNet-B3."
 )
+
+st.markdown("### 🗺️ Segmentation Class Legend")
+
+legend_cols = st.columns(3)
+
+for idx, (cls, color) in enumerate(CLASS_COLORS.items()):
+
+    hex_color = "#{:02X}{:02X}{:02X}".format(
+        color[0],
+        color[1],
+        color[2]
+    )
+
+    with legend_cols[idx % 3]:
+        st.markdown(
+            f"""
+            <div style="
+                display:flex;
+                align-items:center;
+                margin:10px 0;
+            ">
+                <div style="
+                    width:25px;
+                    height:25px;
+                    background:{hex_color};
+                    border:1px solid black;
+                    margin-right:10px;
+                "></div>
+                <span>{CLASS_NAMES[cls]}</span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+st.divider()
 
 uploaded_file = st.file_uploader(
     "Choose an image",
@@ -121,7 +166,9 @@ if uploaded_file is not None:
                     use_container_width=True
                 )
 
-            st.success("Prediction completed successfully!")
+            st.success(
+                "Prediction completed successfully!"
+            )
 
 st.divider()
 
